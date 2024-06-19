@@ -17,33 +17,6 @@ internal class Program
         webDriver.Navigate().GoToUrl("https://syncswap.xyz/swap");
         Thread.Sleep(8000);
 
-        //var checkbox = webDriver.FindElement(By.XPath("//html/body/div[1]/div/div[2]/div/div/div/ul/li[1]]"));
-        //string newClass = "check-box onboarding__terms-checkbox fa fa-check-square check-box__checked";
-
-        //// Изменение класса элемента с помощью JavaScript
-        //IJavaScriptExecutor js = (IJavaScriptExecutor)webDriver;
-        //js.ExecuteScript("arguments[0].className = arguments[1];", checkbox, newClass);
-
-        //// Проверка изменения класса (можно удалить после проверки)
-        //string updatedClass = (string)js.ExecuteScript("return arguments[0].className;", checkbox);
-        //Console.WriteLine(updatedClass);
-
-        /*WebDriverWait wait = new WebDriverWait(webDriver, TimeSpan.FromSeconds(15));
-        wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.CssSelector("#onboarding__terms-checkbox")));*/
-
-        //Actions action = new Actions(webDriver);
-        /*action.MoveToElement(webDriver.FindElement(By.XPath("//*[@id=\"app-content\"]/div/div[2]/div/div/div/ul/li[1]/div")), 2, 2).Click().Perform();*/
-
-
-        //var checkbox = webDriver.FindElement(By.XPath("//*[@id=\"onboarding__terms-checkbox\"]"));
-        //action.MoveByOffset(573, 714).Perform();
-        //Thread.Sleep(10);
-        //action.Click();
-        //action.Click(checkbox).Perform();
-        //Thread.Sleep(3000);
-        //checkbox.Click();
-
-
         WebDriverWait wait = new WebDriverWait(webDriver, TimeSpan.FromSeconds(10));
         IWebElement option = wait.Until<IWebElement>((d) =>
         {
@@ -65,10 +38,4 @@ internal class Program
 
 
     }
-
-    /*private static void ButtonClickMetaMask(WebDriver webDriver)
-    {
-        webDriver.FindElement(By.XPath("//*[@id=\"app-content\"]/div/div[2]/div/div/div/ul/li[3]/button")).Click();
-        Thread.Sleep(1000);
-    }*/
 }
